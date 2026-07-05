@@ -1,4 +1,4 @@
-# AAI 590 - Intelligent Network Intrusion Detection Using Machine Learning, Neural Networks, and Explainable AI
+# Intelligent Network Intrusion Detection Using Machine Learning, Neural Networks, and Explainable AI
 
 ## Project Overview
 
@@ -149,3 +149,121 @@ The repository is organized as follows:
 │   ├── figures/
 │   └── tables/
 └── docs/
+```
+
+The `data/` directory is not expected to contain the full CICIDS2017 dataset in GitHub because of file size. Users should download the dataset from the official source and place the CSV files in `data/raw/`.
+
+## Environment Setup
+
+Create a Python virtual environment:
+
+```bash
+python -m venv .venv
+```
+
+Activate the environment on macOS or Linux:
+
+```bash
+source .venv/bin/activate
+```
+
+Activate the environment on Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Suggested Requirements
+
+The project may use the following core libraries:
+
+```text
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+xgboost
+tensorflow
+keras
+shap
+joblib
+jupyter
+```
+
+If TensorFlow installation on Apple Silicon requires additional setup, use the Apple-compatible TensorFlow package or run the neural network notebooks in Google Colab.
+
+## How to Run the Project
+
+1. Download the CICIDS2017 machine learning CSV files from the official dataset page.
+2. Place the CSV files in the `data/raw/` directory.
+3. Run the notebooks in order:
+   - `01_data_ingestion_and_validation.ipynb`
+   - `02_data_cleaning_and_eda.ipynb`
+   - `03_feature_engineering.ipynb`
+   - `04_traditional_ml_models.ipynb`
+   - `05_neural_network_models.ipynb`
+   - `06_autoencoder_anomaly_detection.ipynb`
+   - `07_model_evaluation_and_explainability.ipynb`
+4. Review generated figures and tables in the `reports/` directory.
+5. Review saved models in the `models/` directory.
+
+## Expected Outputs
+
+The project will produce:
+
+- Cleaned and processed dataset files
+- Exploratory data analysis charts
+- Class distribution and imbalance analysis
+- Trained traditional machine learning models
+- Trained Multilayer Perceptron model
+- Autoencoder anomaly detection results
+- Model comparison tables
+- Confusion matrices
+- ROC and PR curves
+- Feature importance or explainability outputs
+- Final report and presentation materials
+
+## Data Privacy and Ethics
+
+The CICIDS2017 dataset is a public cybersecurity research dataset and does not contain private customer records or personally identifiable information for this academic use case. In a real production environment, network traffic logs could contain sensitive metadata, system identifiers, or user-related information. Therefore, a live implementation would require strong access controls, data minimization, retention controls, and governance review.
+
+The model should also be used carefully because false positives can increase analyst workload, while false negatives can allow attacks to go undetected. The system is intended to support human decision-making, not replace analyst judgment.
+
+## Limitations
+
+This project is a proof of concept and does not represent a production-ready intrusion detection platform. Key limitations include:
+
+- CICIDS2017 may not fully represent current enterprise network behavior.
+- Model performance on the dataset may not directly transfer to live environments.
+- Some attack classes may be imbalanced or underrepresented.
+- Network traffic patterns can drift over time.
+- Real deployment would require monitoring, retraining, and integration with security tools.
+
+## Final Deliverables
+
+The final capstone deliverables include:
+
+- Formal project report
+- GitHub repository with code and documentation
+- Final presentation
+- Trained models and evaluation artifacts
+- Explainability and model comparison results
+
+## References
+
+Canadian Institute for Cybersecurity. (n.d.). *Intrusion detection evaluation dataset (CICIDS2017).* University of New Brunswick. Retrieved July 5, 2026, from https://www.unb.ca/cic/datasets/ids-2017.html
+
+
+## Author
+
+Ajay Kamble
+
+Master of Science in Applied Artificial Intelligence  
+University of San Diego
