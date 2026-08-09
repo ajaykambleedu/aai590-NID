@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# Large raw data
+data/raw/*
+!data/raw/README.md
+
+# Generated outputs
+outputs/
+*.csv
+
+# Model artifacts
+models/*
+!models/README.md
+*.joblib
+*.pkl
+*.keras
+*.h5
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
